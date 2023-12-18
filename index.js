@@ -4,7 +4,7 @@ const server = jsonServer.create()
 const router = jsonServer.router('data/db.json')
 const middlewares = jsonServer.defaults()
 
-const PORT = 3000;
+const PORT = process.env.PORT || 8080;
 
 server.use(middlewares)
 server.use(router)
